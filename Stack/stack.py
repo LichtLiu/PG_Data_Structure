@@ -9,10 +9,7 @@ class Stack:
     def __init__(self, initial_data):
         self.stack = []
         self.initial_data = initial_data
-        '''
-        isinstance() returns True if the specified object
-        is of the specified type, otherwise False
-        '''
+        
         if isinstance(initial_data, Iterable):
             self.stack = list(initial_data)
 
@@ -69,10 +66,6 @@ def main():
     print(stack)
 
     print(stack.peek())
-
-
-
-
 
 
 
