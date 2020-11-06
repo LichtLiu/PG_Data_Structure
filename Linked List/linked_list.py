@@ -143,11 +143,15 @@ class SingleLinkedList:
 
 
 def main():
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print(__doc__)
+
     l = SingleLinkedList()
     while True:
-        opt = input("1. 加入資料\n2. 刪除資料\n3. 插入資料\n4. 刪除特定資料\n5. 印出串列\n6. 印出串列長度\n7. 反轉串列\n0. 結束程式\n 請輸入要使用的功能：")
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(__doc__)
+        print(l)
+        print("這個鏈結串列的長度為："+ str(len(l)))
+        print("-"*20)
+        opt = input("1. 加入資料\n2. 刪除資料\n3. 插入資料\n4. 刪除特定資料\n5. 反轉串列\n0. 結束程式\n 請輸入要使用的功能：")
 
         if opt == "1":
             data = input("請輸入要加入的資料：")
@@ -169,14 +173,7 @@ def main():
             l.delete_node_by_index(int(index))
             print(l)
 
-
         elif opt == "5":
-            print(l)
-
-        elif opt == "6":
-            print(len(l))
-
-        elif opt == "7":
             l.reverse()
             print(l)
 
@@ -185,6 +182,7 @@ def main():
             return False
         else:
             print("請輸入合法指令")
+
 
 
 if __name__ == '__main__':
