@@ -52,9 +52,8 @@ class SingleLinkedList:
             print("{} is not in range".format(index))
 
         elif index == 1:
-            current_node = self.head
             new_node = Node(data)
-            new_node.next = current_node
+            new_node.next = self.head
             self.head = new_node
         else:
             cur_idx = 1
@@ -68,7 +67,7 @@ class SingleLinkedList:
 
     def delete_node_by_index(self, index):
         '''
-        To delete the node by the specific index
+        To delete the specific node
         '''
         if self.head == None:
             print("You can only delete the data from a not empty list")
@@ -78,6 +77,7 @@ class SingleLinkedList:
 
         elif index == 1 and len(self) == 1:
             self.head = None
+            self.tail = None
 
         elif 1 < index < len(self):
             cur_idx = 1
